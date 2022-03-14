@@ -1,3 +1,4 @@
+//test1
 const config = {
   type: Phaser.AUTO,
   parent: 'game',
