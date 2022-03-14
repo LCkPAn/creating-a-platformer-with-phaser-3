@@ -65,6 +65,45 @@ function create() {
     repeat: -1
   });
 
+  // Create an idle animation i.e the first frame
+  this.anims.create({
+    key: 'idle',
+    frames: [{ key: 'player', frame: 'robo_player_0' }],
+    frameRate: 10,
+  });
+
+  // Use the second frame of the atlas for jumping
+  this.anims.create({
+    key: 'jump',
+    frames: [{ key: 'player', frame: 'robo_player_1' }],
+    frameRate: 10,
+  });
+
+  // Enable user input via cursor keys
+  this.cursors = this.input.keyboard.createCursorKeys();
+
+  // Create a sprite group for all spikes, set common properties to ensure that
+  // sprites in the group don't move via gravity or by player collisions
+  this.spikes = this.physics.add.group({
+    allowGravity: false,
+    immovable: true
+  });
+
+  // Get the spikes from the object layer of our Tiled map. Phaser has a
+  // createFromObjects function to do so, but it creates sprites automatically
+  // for us. We want to manipulate the sprites a bit before we use them
+  const spikeObjects = map.getObjectLayer('Spikes')['objects'];
+  spikeObjects.forEach(spikeObject => {
+    // Add new spikes to our sprite group
+    const spike = this.spikes.create(spikeObject.x, spikeObject.y + 200 - spikeObject.height, 'spike').setOrigin(0, 0);
+    // By default the sprite has loads of whitespace from the base image, we
+    // resize the sprite to reduce the amount of whitespace used by the sprite
+    // so collisions can be more precise
+    spike.body.setSize(spike.width, spike.height - 20).setOffset(0, 20);
+  });
+
+  // Add collision between the player and the spikes
+  this.physics.add.collider(this.player, this.spikes, playerHit, null, this);
 }
 
 function update() { }
