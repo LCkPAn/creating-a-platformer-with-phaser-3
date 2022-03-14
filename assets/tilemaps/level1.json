@@ -1,10 +1,11 @@
-{ "height":7,
+{ "compressionlevel":-1,
+ "height":7,
  "infinite":false,
  "layers":[
         {
-         "data":[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 47, 47, 47, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 47, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 47, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4],
+         "data":[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4],
          "height":7,
-         "id":6,
+         "id":1,
          "name":"Platforms",
          "opacity":1,
          "type":"tilelayer",
@@ -15,21 +16,9 @@
         }, 
         {
          "draworder":"topdown",
-         "id":3,
+         "id":2,
          "name":"Spikes",
          "objects":[
-                {
-                 "gid":71,
-                 "height":64,
-                 "id":1,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":64,
-                 "x":192,
-                 "y":256
-                }, 
                 {
                  "gid":71,
                  "height":64,
@@ -39,8 +28,8 @@
                  "type":"",
                  "visible":true,
                  "width":64,
-                 "x":448,
-                 "y":64
+                 "x":193.333333333333,
+                 "y":256
                 }, 
                 {
                  "gid":71,
@@ -51,8 +40,20 @@
                  "type":"",
                  "visible":true,
                  "width":64,
-                 "x":672,
-                 "y":256
+                 "x":448,
+                 "y":65.3333333333333
+                }, 
+                {
+                 "gid":71,
+                 "height":64,
+                 "id":4,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":64,
+                 "x":673.333333333333,
+                 "y":257.333333333333
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -60,11 +61,11 @@
          "x":0,
          "y":0
         }],
- "nextlayerid":7,
+ "nextlayerid":3,
  "nextobjectid":5,
  "orientation":"orthogonal",
  "renderorder":"right-down",
- "tiledversion":"1.2.4",
+ "tiledversion":"1.7.2",
  "tileheight":64,
  "tilesets":[
         {
@@ -82,6 +83,6 @@
         }],
  "tilewidth":64,
  "type":"map",
- "version":1.2,
+ "version":"1.6",
  "width":14
 }
